@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+     <div class="container">
+    <h2>Create your account <span>✨</span></h2>
+    <p>Sign up to access the practice dashboard.</p>
+    <form>
+      <div class="row">
+        <div class="group">
+          <label for="fname">First name</label>
+          <input type="text" id="fname" required>
+        </div>
+        <div class="group">
+          <label for="lname">Last name</label>
+          <input type="text" id="lname" required>
+        </div>
+      </div>
+
+      <div class="group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="group">
+        <label for="confirm password">Confirm password</label>
+        <input type="password" id="cpassword" required>
+      </div>
+      <div class="letter">
+        Use at least 8 characters,with letters & <br>numbers.
+      </div>
+      <div id="line"></div>
+
+      <div class="checkbox">
+        <input type="checkbox" required> I agree to the <a href="#">Terms</a>
+      </div>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <div class="bottom">
+      <div class="signin">
+        Already have an account? <a href="#">Sign in</a>
+      </div>
+      <button class="demo">➡️ Seed Demo Users</button>
+    </div>
+  </div>
+    
+</body>
+</html>

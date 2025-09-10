@@ -1,0 +1,152 @@
+   body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 380px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .emoji {
+      color: transparent;
+      text-shadow: 0 0 0 black; 
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      margin-top:16px ;
+      font-size: 14px;
+      color: #333;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      background-color: #fff;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      box-sizing: border-box;
+      height: 42px; 
+    }
+
+    .password-wrapper {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .password-wrapper input {
+      padding-right: 40px; 
+    }
+
+    .eye-icon {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      pointer-events: none; 
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    small {
+      color: #777;
+      display: block;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #555;
+      font-weight: normal;
+    }
+
+    .options a {
+      margin-top: 10px;
+      color: #4169e1;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .btn {
+      width: 100%;
+      background: linear-gradient(blue, rgb(60, 60, 181));
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .signup {
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .signup a {
+      color: #1e5cff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .quick-demo {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .quick-demo button {
+      background: #f0e4f2;
+      border: 1px solid #ff90eb;
+      color: #d633b5;
+      font-size: 14px;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }

@@ -1,0 +1,123 @@
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5fa;  
+      color: rgb(18, 14, 14);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+      .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 370px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      
+    }
+       h2 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    h2 span {
+      font-size: 24px;
+    }
+     p {
+      font-size: 12px;
+      margin-bottom: 20px;
+      color: #565656 ;
+    }
+      .group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+     label {
+        color: #565656;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+       input {
+      padding: 10px;
+          border: 1px solid #c5dbf2;
+      
+      border-radius: 8px;
+      background: #edf0f7;
+      color: black;
+    
+    }
+    
+      .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+        .checkbox {
+            color: #565656;
+      margin: 10px 0;
+      font-size: 14px;
+      text-align: left;
+    }
+    .checkbox a{
+        color: #565656;
+        text-decoration: none;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #2563eb, #4e68b1);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    button:hover {
+      background: linear-gradient(to right, #1d4ed8, #3f4a63);
+    }
+     .bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .signin{
+        color: #565656;
+    }
+     .signin a {
+      color: #565656;
+      text-decoration: none;
+      
+    }
+    .demo {
+      width: 115px;
+      padding: 6px 2px;
+      font-size: 10px;
+      border-radius: 12px;
+      border: none;
+      background: #b8b5b5;
+      color: #565656;
+      cursor: pointer;
+    }
+    .demo:hover {
+      background: #1e3a8a;
+      color: white;
+    }
+    .letter{
+        font-size: 12px;
+        
+        color: #565656;
+    }
+    #line{
+        margin-top: 10px;
+        height: 10px;
+        width: 373px;
+        border: none;
+        background-color:  #eaf1fa;
+        border-radius: 10px 10px 10px 10px;
+    }
+  

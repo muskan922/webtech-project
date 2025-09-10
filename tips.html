@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Implementation Tips Card</title>
+<link rel="stylesheet" href="tips.css">
+</head>
+<body>
+
+  <div class="tips-card" role="region" aria-label="Implementation tips" style="border: 1px solid red;">
+    <div class="header">
+      <h2 class="title">Implementation Tips <span class="emoji">💡</span></h2>
+    </div>
+
+    <p class="subtitle">Learn best practices for building secure and accessible login forms:</p>
+
+    <ul class="tips-list">
+      <li>Always validate user input both on the client and server side</li>
+      <li>Never store real passwords in <span class="inline-code">localStorage</span> in production - this demo uses it only for learning</li>
+      <li>Use <span class="inline-code">aria-live</span> regions for accessible status messages and error handling</li>
+      <li>Implement proper session management with secure tokens in real applications</li>
+      <li>Use HTTPS in production and implement rate limiting to prevent brute force attacks</li>
+      <li>Consider implementing two-factor authentication for enhanced security</li>
+    </ul>
+
+    <div class="action-wrap">
+      <button class="got-btn">Got it!</button>
+    </div>
+  </div>
+
+</body>
+</html>
