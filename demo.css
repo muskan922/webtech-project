@@ -1,3 +1,4 @@
+
   body {
       font-family: Arial, sans-serif;
       background-color: #f5f5fa;  
@@ -7,6 +8,8 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+            position: relative;
+
     }
       .container {
       background: white;
@@ -14,6 +17,7 @@
       border-radius: 12px;
       width: 370px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      /* position: relative; */
       
     }
        h2 {
@@ -23,12 +27,7 @@
     h2 span {
       font-size: 24px;
     }
-     p {
-      font-size: 12px;
-      margin-bottom: 20px;
-      color: #565656 ;
-    }
-      .group {
+   .group {
       display: flex;
       flex-direction: column;
       margin-bottom: 15px;
@@ -52,19 +51,28 @@
       .row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 6px;
     }
         .checkbox {
-            color: #565656;
-      margin: 10px 0;
-      font-size: 14px;
+      color: #565656;
+      display: flex;
+      font-size: 14px;  
       text-align: left;
+      display: flex;
+      display: flex;
+      
+
     }
     .checkbox a{
         color: #565656;
         text-decoration: none;
+        margin-bottom: -200px;
+        cursor: pointer;
+
+
+        
     }
-    button {
+    .ui {
       width: 100%;
       padding: 12px;
       border: none;
@@ -75,7 +83,7 @@
       cursor: pointer;
       margin-top: 5px;
     }
-    button:hover {
+    .ui:hover {
       background: linear-gradient(to right, #1d4ed8, #3f4a63);
     }
      .bottom{
@@ -120,4 +128,42 @@
         background-color:  #eaf1fa;
         border-radius: 10px 10px 10px 10px;
     }
-  
+
+    #bm{
+      margin-top: 13px;
+    }
+     #termsBox{
+      display: none; 
+      position: absolute;
+      z-index: 2;
+      background-color: rgb(254, 251, 251);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      width: 650px;
+      text-align: justify;
+      padding:30px 30px 20px 30px;
+      border-radius: 10px;
+      line-height: 30px;
+      height: 225px;
+     }
+  .demo-term{
+    position: absolute;
+    justify-content: center;
+    top: 300px;
+    
+     left: 433px; 
+  }
+ .close-btn{
+    margin-left: 500px;
+    border:none;
+    width: 80px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 100px;
+    background-color: rgb(165, 163, 163);
+    color: black;
+    
+    
+  }
+  .close-btn:hover{
+    background-color: #1d4ed8;
+
+  }
