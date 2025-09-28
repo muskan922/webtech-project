@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebTech Practice - Dashboard</title>
+    <link rel="stylesheet" href="../Css/dashboard.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="profile">
+        <div class="profile-icon">NA</div>
+        <div class="profile-info">
+          <strong>New Acc</strong><br />
+          <small>muskan12@gmail.com</small>
+        </div>
+      </div>
+
+      <h3>Dashboard</h3>
+      <a href="#" class="active" onclick="contain(0)">🏠 Overview</a>
+      <a href="#" onclick="contain(1)">👤 Profile Settings</a>
+      <a href="#" onclick="contain(2)">🔒 Security</a>
+      <a href="#" onclick="contain(3)">🔔 Notifications</a>
+
+      <h3>Quick Actions</h3>
+      <a href="#" onclick="contain(4)">❓ Help & Support</a>
+
+      <h3>Account</h3>
+      <a href="#">📦 Sign Out</a>
+    </div>
+
+    <!-- Header -->
+    <div class="main">
+      <div class="topbar">
+        <h2>WebTech Practice • Dashboard</h2>
+        <button class="theme-btn">🌗 Theme</button>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="welcome containActive element">
+      <div class="back">
+        <h3>Welcome back,<span id="uk">New Acc</span>👋</h3>
+        <p>
+          Manage your profile settings and account preferences. Your data is
+          securely stored in your browser's localStorage.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>🎨</h3>
+          <h4>Theme</h4>
+          <p>Dark/Light mode persisted across all pages</p>
+          <div class="progress"></div>
+        </div>
+        <div class="card">
+          <h3>🔐</h3>
+          <h4>Authentication</h4>
+          <p>Secure session stored in browser storage</p>
+          <div class="progress"></div>
+        </div>
+        <div class="card">
+          <h3>📄</h3>
+          <h4>Profile</h4>
+          <p>20% profile completed (1/5 fields)</p>
+          <div class="progress"></div>
+        </div>
+        <div class="card">
+          <h3>🛡️</h3>
+          <h4>Security</h4>
+          <p>Password protection and account security</p>
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <h3>Quick Actions</h3>
+      <div class="quick-actions">
+        <div class="quick-card" id="select" onclick="contain(1)">
+          <h4>✏️</h4>
+          <h2>Edit Profile</h2>
+          <p>Update your personal information</p>
+        </div>
+        <div class="quick-card" onclick="contain(2)">
+          <h4>🔑</h4>
+          <h2>Change Password</h2>
+          <p>Update your account security</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profile settings -->
+    <div class="profile element">
+      <h2>Profile Settings</h2>
+      <h3>Personal Information</h3>
+      <form id="form">
+        <div class="form-group">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" value="" id="full_name" />
+          </div>
+          <div class="field">
+            <label>Date of Birth</label>
+            <input type="date" placeholder="dd-mm-yyyy" id="dob" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" value="" id="email_address" />
+          </div>
+          <div class="field">
+            <label>Phone Number</label>
+            <input type="text" value="" id="phone_no" />
+          </div>
+        </div>
+        <h3 class="address">Address Information</h3>
+        <div class="form-group">
+          <div class="field" style="flex: 1">
+            <label>Street Address</label>
+            <textarea
+              placeholder="Enter your complete address"
+              id="adress_info"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <label>Pin code</label>
+            <input type="text" value="" id="pin" />
+          </div>
+          <div class="field">
+            <label>City</label>
+            <input type="text" value="" id="city" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="field">
+            <label>Country</label>
+            <input type="text" value="" id="count" />
+          </div>
+          <div class="field">
+            <label>Github Profile</label>
+            <input type="text" value="" id="git" />
+          </div>
+        </div>
+        <div class="route">
+          <button class="py" type="button">Cancel Changes</button>
+          <button class="ry" type="submit">💾Save Changes</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Security -->
+    <div class="security element">
+      <h2>Security Settings</h2>
+      <section class="password-section">
+        <h3>🔒 Change Password</h3>
+        <p>
+          Keep your account secure by using a strong password and changing it
+          regularly.
+        </p>
+        <form>
+          <div class="form-ro">
+            <div class="form-grp">
+              <label>Current Password</label>
+              <input type="password" placeholder="Enter current password" />
+            </div>
+            <div class="form-grp">
+              <label>New Password</label>
+              <input type="password" placeholder="Minimum 6 characters" />
+            </div>
+          </div>
+          <div class="form-grp full-width">
+            <label>Confirm New Password</label>
+            <input type="password" placeholder="Re-enter new password" />
+          </div>
+          <div class="buttns">
+            <button type="reset" class="btn clear">Clear</button>
+            <button type="submit" class="btn update">🔐 Update Password</button>
+          </div>
+        </form>
+      </section>
+      <hr />
+      <section class="security-info">
+        <h3>🛡️ Security Information</h3>
+        <div class="inf-cards">
+          <div class="car">
+            <div>
+              <div class="ico">📅</div>
+              <strong>Account Created</strong>
+              <p>Information not available</p>
+            </div>
+          </div>
+          <div class="car">
+            <div>
+              <div class="ico">🔄</div>
+              <strong>Last Updated</strong>
+              <p>Never updated</p>
+            </div>
+          </div>
+          <div class="car">
+            <div>
+              <div class="ico">🌐</div>
+              <strong>Session</strong>
+              <p>Current browser session active</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Notifications -->
+    <div class="notifications element">
+      <div class="sectio">
+        <h2>Notifications</h2>
+        <h3>Notification Preferences</h3>
+        <p class="descripti">
+          Manage how and when you receive notifications about your account
+          activity.
+        </p>
+        <div class="card-rw">
+          <div class="cardo email">
+            <div>📧</div>
+            <h4>Email Notifications</h4>
+            <p>Receive important updates via email</p>
+            <label
+              ><input type="checkbox" checked /> Enable email
+              notifications</label
+            >
+          </div>
+          <div class="cardo">
+            <div>🔒</div>
+            <h4>Security Alerts</h4>
+            <p>Get notified about security changes</p>
+            <label
+              ><input type="checkbox" checked /> Enable security alerts</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="sectio" id="recent">
+        <h3>Recent Activity</h3>
+        <div class="activity">
+          <div class="activity-details">
+            <div class="activity-icon">✅</div>
+            <h4>Profile Updated</h4>
+            <p>Your profile information was successfully updated</p>
+            <p>Today</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- help section -->
+
+    <div class="help_section">
+      <h2>Help & Support</h2>
+
+      <div class="faq-section">
+        <h3>Frequently Asked Questions</h3>
+
+        <div class="faq">
+          <strong>How do I update my profile?</strong>
+          <span
+            >Click on "Profile Settings" in the sidebar to edit your personal
+            information, address, and other details.</span
+          >
+        </div>
+
+        <div class="faq">
+          <strong>Is my data secure?</strong>
+          <span
+            >This is a demo application that stores data in your browser's
+            localStorage. In a production app, data would be encrypted and
+            stored securely on servers.</span
+          >
+        </div>
+
+        <div class="faq">
+          <strong>How do I change my password?</strong>
+          <span
+            >Go to "Security" in the sidebar, enter your current password, then
+            set and confirm your new password.</span
+          >
+        </div>
+      </div>
+
+      <div class="support-section">
+        <h3>Contact Support</h3>
+        <p class="note">
+          This is a demonstration application for learning web development. In a
+          real application, you would find contact information and support
+          options here.
+        </p>
+      </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

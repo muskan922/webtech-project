@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="../Css/signin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome back <span class="emoji">👋</span></h2>
+      <p class="subtitle">Sign in to continue to your dashboard</p>
+
+      <form id="too">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <span class="eye-icon">👁️</span>
+        </div>
+
+        <small>Password must be at least 6 characters long.</small>
+
+        <div class="options">
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            Remember me for 30 days
+          </label>
+          <a href="#" id="forget">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">Sign In</button>
+      </form>
+
+      <p class="signup">
+        New to WebTech Practice?
+        <a href="#" id="Create_acc">Create an account</a>
+      </p>
+
+      <div class="quick-demo">
+        <button>⚡ Quick Demo</button>
+      </div>
+    </div>
+    <script src="../js/signin.js"></script>
+  </body>
+</html>

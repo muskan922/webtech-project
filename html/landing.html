@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>WebTech Practice — Landing</title>
-  <link rel="stylesheet" href="landing.css">
+  <link rel="stylesheet" href="../Css/landing.css">
 
 
 
@@ -23,16 +23,14 @@
 
       <nav  nav role="navigation" aria-label="Main">
         <a href="#about" class="you">About</a>
-        <a href="#services"class="you">Services</a>
+        <a href="#star"class="you">Services</a>
         <a href="#theme" class="you">🌗Theme</a>
-        <a href="#login" class="btn">Login</a>
-        <a href="#signup" class="btn">Sign Up</a>
+        <a href="#login"  class="btn" id="log">Login</a>
+        <a href="#signup" class="btn" id ="sign">Sign Up</a>
         
       </nav>
      
     </header>
-    
-
   
     <section class="hero" role="region" aria-label="Landing">
       <div class="hero-left">
@@ -42,31 +40,48 @@
         </p>
 
         <div class="controls">
-          <a class="btn" href="#getstarted">Get Started</a>
-          <a class="back" href="#account" >I already have an account</a>
+          <a class="btn" href="#getstarted" id="help">Get Started</a>
+          <a class="back" href="#account" id="op">I already have an account</a>
         </div>
       </div>
 
       <div class="po">
         <div class="feature-card" role="article" aria-label="Feature: Dynamic Theming">
+        
           <div class="poll">
-            <div class="hj" style="display: flex;">
-              <div class="lk">◀</div>
-              <div>
-    
-              <h3>Dynamic Theming</h3>
-              <p>Beautiful dark/light mode with smooth transitions demonstrated persisted across all pages and sections.</p>
-              </div>
-              <div class="lk">▶</div>
-            </div>
-          </div>
+  <div class="hj">
+    <div class="mode" >
+      <h3>Dynamic Theming</h3>
+      <p>Beautiful dark/light mode with smooth transitions demonstrated persisted across all pages and sections.</p>
+    </div>
+    <div class="mode">
+      <h3>Responsive Layout</h3>
+      <p>Adaptive sections that resize smoothly on mobile, tablet, and desktop views.</p>
+    </div>
+    <div class="mode">
+      <h3>Interactive Components</h3>
+      <p>Buttons, toggles, and sliders built to feel natural and engaging.</p>
+    </div>
+  </div>
 
-          <div class="dots" aria-hidden="true">
-            <span class="dot"></span><span class="dot"></span><span class="dot" style="background:var(--accent)"></span>
-          </div>
+  <!-- Arrows -->
+  <div class="lk prev">◀</div>
+  <div class="lk next">▶</div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+
+       
         </div>
-      </div>
+      </div> 
     </section>
+    <!-- slideshow ended -->
 <section id="about" class="about">
   <h2>About This Project</h2>
   <p>
@@ -123,11 +138,12 @@
       <div>© 2025 WebTech Practice. Built for learning and growth.</div>
       <div class="ok">
         <a class="you" href="#about">About</a>
-        <a class="you" href="#services">Services</a>
-        <a class="you" href="#login">Login</a>
-        <a class="you" href="#signup" style="padding:8px 12px;font-size:13px">Signup</a>
+        <a class="you" href="#start">Services</a>
+        <a class="you" href="../html/signin.html">Login</a>
+        <a class="you" href="../html/signup.html" style="padding:8px 12px;font-size:13px">Signup</a>
       </div>
     </footer>
+    <script src="../js/landing.js"></script>
 
   </div>
 </body>
