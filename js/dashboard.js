@@ -91,6 +91,103 @@ function profile(eve) {
 let form = document.getElementById("form");
 form.addEventListener("submit", profile);
 
+document.addEventListener("DOMContentLoaded", function () {
+  const cancelBtn = document.getElementById("cancel_changes");
+  console.log("cansel_changes");
+
+  if (cancelBtn) {
+    cancelBtn.addEventListener("click", () => {
+      console.log("Cancel clicked");
+      const active_user = JSON.parse(localStorage.getItem("active_user"));
+      if (!active_user) {
+        alert("No active user found.");
+        return;
+      }
+
+      const inputs = document.querySelectorAll("#form input, #form textarea");
+      inputs.forEach((input) => (input.value = ""));
+
+      if (active_user.fname && active_user.lname) {
+        document.getElementById(
+          "full_name"
+        ).value = `${active_user.fname} ${active_user.lname}`;
+      }
+
+      if (active_user.email) {
+        document.getElementById("email_address").value = active_user.email;
+      }
+
+      if (active_user.date)
+        document.getElementById("dob").value = active_user.date;
+
+      if (active_user.phone)
+        document.getElementById("phone_no").value = active_user.phone;
+
+      if (active_user.adress)
+        document.getElementById("adress_info").value = active_user.adress;
+
+      if (active_user.pin_code)
+        document.getElementById("pin").value = active_user.pin_code;
+
+      if (active_user.cite)
+        document.getElementById("city").value = active_user.cite;
+
+      if (active_user.country)
+        document.getElementById("count").value = active_user.country;
+
+      if (active_user.git_hub)
+        document.getElementById("git").value = active_user.git_hub;
+    });
+  }
+});
+
+// cancel changes
+// document.getElementById("cancel_changes").addEventListener("click", () => {
+//   const active_user = JSON.parse(localStorage.getItem("active_user"));
+//   console.log("cancel chanes clicked");
+
+//   if (!active_user) {
+//     alert("No active user found.");
+//     return;
+//   }
+
+//   // Clear all input fields
+//   const inputs = document.querySelectorAll("#form input, #form textarea");
+//   inputs.forEach((input) => (input.value = ""));
+
+//   // Set Full Name and Email
+//   if (active_user.fname && active_user.lname) {
+//     document.getElementById(
+//       "full_name"
+//     ).value = `${active_user.fname} ${active_user.lname}`;
+//   }
+
+//   if (active_user.email) {
+//     document.getElementById("email_address").value = active_user.email;
+//   }
+
+//   // Optional fields - fill only if present
+//   if (active_user.date) document.getElementById("dob").value = active_user.date;
+
+//   if (active_user.phone)
+//     document.getElementById("phone_no").value = active_user.phone;
+
+//   if (active_user.adress)
+//     document.getElementById("adress_info").value = active_user.adress;
+
+//   if (active_user.pin_code)
+//     document.getElementById("pin").value = active_user.pin_code;
+
+//   if (active_user.cite)
+//     document.getElementById("city").value = active_user.cite;
+
+//   if (active_user.country)
+//     document.getElementById("count").value = active_user.country;
+
+//   if (active_user.git_hub)
+//     document.getElementById("git").value = active_user.git_hub;
+// });
+
 function signOut() {
   localStorage.removeItem("active_user");
 
