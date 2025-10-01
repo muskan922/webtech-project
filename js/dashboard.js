@@ -35,6 +35,21 @@ function profile(eve) {
   const country = document.getElementById("count").value;
   const git_hub = document.getElementById("git").value;
 
+  if (
+    !phone ||
+    !date ||
+    !adress ||
+    !qok ||
+    !email ||
+    !pin_code ||
+    !cite ||
+    !country ||
+    !git_hub
+  ) {
+    alert("all fields are required");
+    return;
+  }
+
   const fullName = qok;
 
   // Split by space
@@ -68,8 +83,156 @@ function profile(eve) {
   users = users.map((u) => (u.email == active_user.email ? new_update : u));
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("active_user", JSON.stringify(new_update));
+  console.log(users);
+  console.log(new_update);
 
   alert("updated successfully");
 }
 let form = document.getElementById("form");
 form.addEventListener("submit", profile);
+
+function signOut() {
+  localStorage.removeItem("active_user");
+
+  window.location.href = "../html/signup.html";
+}
+
+// Password Update Logic
+// const passwordForm = document.querySelector(".password-section form");
+// const currentPasswordInput = passwordForm.querySelector(
+//   "input[type='password']:nth-of-type(1)"
+// );
+// const newPasswordInput = passwordForm.querySelector(
+//   "input[type='password']:nth-of-type(2)"
+// );
+// const confirmPasswordInput = passwordForm.querySelector(
+//   "input[type='password']:nth-of-type(3)"
+// );
+
+function security(ere) {
+  ere.preventDefault();
+
+  const currentPassword = document.getElementById("cp").value.trim();
+  const newPassword = document.getElementById("np").value.trim();
+  const confirmPassword = document.getElementById("cop").value.trim();
+  const passwordForm = document.getElementById("updation");
+
+  const users = JSON.parse(localStorage.getItem("users")) || [];
+  const activeUser = JSON.parse(localStorage.getItem("active_user"));
+  const foundUser = users.find((u) => u.email === activeUser?.email);
+
+  if (!foundUser) {
+    alert("No active user found.");
+    return;
+  }
+
+  if (currentPassword !== foundUser.password) {
+    alert("Current password is incorrect.");
+    return;
+  }
+
+  if (newPassword.length < 6) {
+    alert("New password must be at least 6 characters.");
+    return;
+  }
+
+  // 3. Check new password and confirm password match
+  if (newPassword !== confirmPassword) {
+    alert("New passwords do not match.");
+    return;
+  }
+
+  // 4. Update password
+  foundUser.password = newPassword;
+
+  // Update users array
+  const updatedUsers = users.map((user) =>
+    user.email === foundUser.email ? foundUser : user
+  );
+
+  // Update localStorage
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+  localStorage.setItem("active_user", JSON.stringify(foundUser));
+
+  alert("Password updated successfully.");
+
+  // Clear the form
+  passwordForm.reset();
+}
+const passwordForm = document.getElementById("updation");
+passwordForm.addEventListener("submit", security);
+
+// const currentPassword = currentPasswordInput.value.trim();
+// const newPassword = newPasswordInput.value.trim();
+// const confirmPassword = confirmPasswordInput.value.trim();
+
+// const users = JSON.parse(localStorage.getItem("users")) || [];
+// const activeUser = JSON.parse(localStorage.getItem("active_user"));
+
+// Check if user exists
+//   const foundUser = users.find((u) => u.email === activeUser?.email);
+
+//   if (!foundUser) {
+//     alert("No active user found.");
+//     return;
+//   }
+
+//   // 1. Validate current password
+//   if (currentPassword !== foundUser.password) {
+//     alert("Current password is incorrect.");
+//     return;
+//   }
+
+//   // 2. Validate new password length
+//   if (newPassword.length < 6) {
+//     alert("New password must be at least 6 characters.");
+//     return;
+//   }
+
+//   // 3. Check new password and confirm password match
+//   if (newPassword !== confirmPassword) {
+//     alert("New passwords do not match.");
+//     return;
+//   }
+
+//   // 4. Update password
+//   foundUser.password = newPassword;
+
+//   // Update users array
+//   const updatedUsers = users.map((user) =>
+//     user.email === foundUser.email ? foundUser : user
+//   );
+
+//   // Update localStorage
+//   localStorage.setItem("users", JSON.stringify(updatedUsers));
+//   localStorage.setItem("active_user", JSON.stringify(foundUser));
+
+//   alert("Password updated successfully.");
+
+//   // Clear the form
+//   passwordForm.reset();
+// }
+
+// );
+
+// Clear Button Logic
+const clearBtn = passwordForm.querySelector(".btn.clear");
+clearBtn.addEventListener("click", function () {
+  passwordForm.reset();
+});
+
+// if (!password) {
+//   showError("password", "Password is required");
+//   valid = false;
+// } else if (password.length < 9) {
+//   showError("password", "Password must be at least 8 characters");
+//   valid = false;
+// }
+
+// if (!field) {
+//   showError("password", "Password is required");
+//   valid = false;
+// } else if (password.length < 8) {
+//   showError("password", "Password must be at least 8 characters");
+//   valid = false;
+// }

@@ -20,7 +20,7 @@ body {
   border-right: 1px solid #e5e7eb;
 }
 
-.profile {
+.profill {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -108,9 +108,18 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin: 100px 10px 8px 300px;
 }
+#uk {
+  padding: 0px 7px 0px 15px;
+
+  color: #fff; /* text color */
+  text-shadow: 0 0 5px #181318, 0 0 10px #130e13, 0 0 20px #141014,
+    0 0 40px #111011;
+
+  font-weight: bold;
+}
 
 .welcome h3 {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 25px;
 }
 
@@ -467,7 +476,7 @@ hr {
   flex: 2;
   background-color: #f1f6fe;
   border-radius: 10px;
-  padding: 50px 20px 20px 10px;
+  padding: 20px 20px 20px 30px;
   width: 100px;
   box-shadow: inset 0 0 0 1px #e0e0e0;
 }
@@ -514,14 +523,14 @@ hr {
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  line-height: 20px;
 }
 
 .activity-icon {
   font-size: 24px;
   color: green;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 1.5px;
+  margin-bottom: 20px;
 }
 
 .activity-details h4 {
@@ -534,14 +543,10 @@ hr {
   color: #5f6368;
 }
 
-.containActive {
-  display: block;
-}
-
 .help_section {
   display: none;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 120px 400px 0px 0px;
   background: #fff;
   border-radius: 8px;
   padding: 2rem;
@@ -602,4 +607,7 @@ h2 {
 .faq-section h3::before {
   content: "❓";
   margin-right: 0.5rem;
+}
+.containActive {
+  display: block;
 }

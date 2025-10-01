@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="sidebar">
-      <div class="profile">
+      <div class="profill">
         <div class="profile-icon">NA</div>
         <div class="profile-info">
           <strong>New Acc</strong><br />
@@ -26,7 +26,7 @@
       <a href="#" onclick="contain(4)">❓ Help & Support</a>
 
       <h3>Account</h3>
-      <a href="#">📦 Sign Out</a>
+      <a href="#" onclick="signOut()">📦 Sign Out</a>
     </div>
 
     <!-- Header -->
@@ -160,23 +160,35 @@
           Keep your account secure by using a strong password and changing it
           regularly.
         </p>
-        <form>
+        <form id="updation">
           <div class="form-ro">
             <div class="form-grp">
               <label>Current Password</label>
-              <input type="password" placeholder="Enter current password" />
+              <input
+                type="password"
+                placeholder="Enter current password"
+                id="cp"
+              />
             </div>
             <div class="form-grp">
               <label>New Password</label>
-              <input type="password" placeholder="Minimum 6 characters" />
+              <input
+                type="password"
+                placeholder="Minimum 6 characters"
+                id="np"
+              />
             </div>
           </div>
           <div class="form-grp full-width">
             <label>Confirm New Password</label>
-            <input type="password" placeholder="Re-enter new password" />
+            <input
+              type="password"
+              placeholder="Re-enter new password"
+              id="cop"
+            />
           </div>
           <div class="buttns">
-            <button type="reset" class="btn clear">Clear</button>
+            <button type="button" class="btn clear">Clear</button>
             <button type="submit" class="btn update">🔐 Update Password</button>
           </div>
         </form>
@@ -245,8 +257,7 @@
           <div class="activity-details">
             <div class="activity-icon">✅</div>
             <h4>Profile Updated</h4>
-            <p>Your profile information was successfully updated</p>
-            <p>Today</p>
+            <p>Your profile information was successfully updated <br />Today</p>
           </div>
         </div>
       </div>
@@ -254,7 +265,7 @@
 
     <!-- help section -->
 
-    <div class="help_section">
+    <div class="help_section element">
       <h2>Help & Support</h2>
 
       <div class="faq-section">
